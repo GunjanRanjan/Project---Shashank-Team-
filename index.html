@@ -3,9 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>TicTacToe</title>
+  <link rel="stylesheet" href="/style.css">
+
+<!--   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap:30px ;
+    padding: 1rem;
+
+  }
+
+
+
+    .TicTacToe{
+      width: 90vw;
+      max-width: 400px;
+      aspect-ratio: 1/1;
+
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+      gap: 20px;
+
+    
+      border-radius: 12px;
+      background: #111;
+      padding: 12px;
+    }
+
+
+    .cell{
+      background-color: yellowgreen;
+      border-radius: 15px;
+      font-size: 2rem;
+      text-align: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .Reset-Button{
+      max-width: 200px;
+      width: 100%;
+      height: 7vh;
+      font-size: 18px;
+      border-radius: 15px;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .message{
+      font-size: 2.1rem;
+      font-weight: 600;
+    }
+
+ 
+    
+  </style> -->
 </head>
 <body>
-  
+  <div class="container">
+    <h1 class="text">TIC TAC TOE</h1>
+
+    <div class="TicTacToe">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+
+    <button class="Reset-Button">Reset</button>
+    <p class="message"></p>
+  </div>
+
+  <script src="/script.js">
+
+    
+    
+/*     const cells = document.querySelectorAll(".cell");
+    const resetBtn = document.querySelector(".Reset-Button");
+    const message = document.querySelector(".message");
+    const bgcolor = document.querySelector(".TicTacToe");
+
+    
+    let currentPlayer = "X";
+    let gameActive = true;
+
+    
+    const WIN_SETS = [
+      [0,1,2], [3,4,5], [6,7,8], 
+      [0,3,6], [1,4,7], [2,5,8], 
+      [0,4,8], [2,4,6]           
+    ];
+
+    
+    function handleCellClick(e){
+      const cell = e.target;
+      if (!gameActive) return;
+      if (cell.textContent !== "") return; 
+
+      
+      cell.textContent = currentPlayer;
+
+      
+      if (checkWinner()){
+        message.textContent = `${currentPlayer} wins! ....Yeaah Boy😎`;
+        // bgcolor.style.backgroundColor = "red";
+
+        gameActive = false;
+
+          // Auto-reset after 3 seconds
+        setTimeout(() => {
+        cells.forEach(cell => cell.textContent = "");
+        currentPlayer = "X";
+        gameActive = true;
+        message.textContent = "Turn: X";
+  }, 1500);
+        return;
+      }
+
+      
+      if ([...cells].every(c => c.textContent !== "")){
+        message.textContent = "It's a draw!";
+        gameActive = false;
+
+        setTimeout(() => {
+          cells.forEach(cell => cell.textContent = "");
+          currentPlayer = "X";
+          gameActive = true;
+          message.textContent = "Turn: X";
+        }, 3000);
+        return;
+      }
+
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      message.textContent = `Turn: ${currentPlayer}`;
+    }
+
+    
+    function checkWinner(){
+      return WIN_SETS.some(([a,b,c]) =>
+        cells[a].textContent === currentPlayer &&
+        cells[b].textContent === currentPlayer &&
+        cells[c].textContent === currentPlayer
+      );
+    }
+
+    
+    resetBtn.addEventListener("click", () => {
+      cells.forEach(cell => cell.textContent = "");
+      currentPlayer = "X";
+      gameActive = true;
+      message.textContent = "Turn: X";
+    });
+
+    
+    cells.forEach(cell => cell.addEventListener("click", handleCellClick));
+    
+    message.textContent = "Turn: X";*/
+  </script> 
 </body>
 </html>
