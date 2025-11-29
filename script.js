@@ -44,7 +44,7 @@ function handleCellClick(banana){
 
   // Check winner, as of now user has clicked on the first cell till now.
   if (checkWinner()){
-    message.textContent = `${currentPlayer} wins! ....Yeaah Boy😎`;
+    message.textContent = `${currentPlayer} wins! ...Yeaah Boy😎`;
     gameActive = false;
 
     setTimeout(() => {
